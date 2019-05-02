@@ -1,0 +1,33 @@
+.story-wrapper{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+}
+.story-image{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    border-color: #3578e5;
+    border-width: 2px;
+    border-style: solid;
+}
+.story-content{
+    margin-left: 10px;
+}
+.story-name{
+    color: #365899;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.story-name:hover{
+    text-decoration: underline;
+}
+
+.story-time{
+    color: #8d949e;
+    font-size: 13px;
+}
