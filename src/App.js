@@ -1,5 +1,7 @@
 import React from "react";
 import Story from "./story/story";
+import Post from "./post";
+import UsersList from "./users/users.controller";
 
 // 1. Создаем папку/файл
 // 2. Импортируем компонент
@@ -37,9 +39,11 @@ const stories = [{
 
 const App = (props) => (
     <div>
-        {stories.map((story) => (
-            <Story {...story} />
-        ))}
+        {/*{stories.map((story) => (*/}
+            {/*<Story {...story} />*/}
+        {/*))}*/}
+        {/*<Post avatar={CAT_1} text="Это текст поста" author="Vlad"/>*/}
+        <UsersList />
     </div>
 )
 export default App;
