@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import Story from "./story/story";
 import Post from "./post";
 import UsersList from "./users/users.controller";
+import Timer from "./timer/timer.controller";
 
 // 1. Создаем папку/файл
 // 2. Импортируем компонент
@@ -37,13 +38,22 @@ const stories = [{
 }];
 
 
-const App = (props) => (
-    <div>
-        {/*{stories.map((story) => (*/}
+let showTimer = true;
+const App = (props) => {
+    const [showTimer, changeTimer] = useState(true);
+    return (
+        <div>
+            {/*{stories.map((story) => (*/}
             {/*<Story {...story} />*/}
-        {/*))}*/}
-        {/*<Post avatar={CAT_1} text="Это текст поста" author="Vlad"/>*/}
-        <UsersList />
-    </div>
-)
+            {/*))}*/}
+            {/*<Post avatar={CAT_1} text="Это текст поста" author="Vlad"/>*/}
+            {/*<UsersList />*/}
+            <button onClick={() => changeTimer(!showTimer)}>Toggle Timer</button>
+            {showTimer ? <Timer time={120} /> : null}
+            <Timer time={300} step={2} />
+            {/*<Timer time={90} />*/}
+            {/*<Timer time={600} />*/}
+        </div>
+    )
+}
 export default App;

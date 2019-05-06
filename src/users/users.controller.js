@@ -152,7 +152,7 @@ export default class UsersList extends React.Component {
                     <Users.Button type="ADD" onClick={this.addUser}>Add User</Users.Button>
                 </Users.Create>
                 {this.state.users.map((user) => (
-                    <User onDelete={this.deleteUser.bind(this, user.id)} {...user}/>
+                    <User count={this.state.usersCount} onDelete={this.deleteUser.bind(this, user.id)} {...user}/>
                 ))}
             </div>
         )
